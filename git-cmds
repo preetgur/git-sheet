@@ -1,0 +1,3 @@
+How to Change Folder Name When Cloning a GitHub Repo
+
+>> git clone https://github.com/preetgur/git-sheet.git new-folder-name
