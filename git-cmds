@@ -1,3 +1,16 @@
-How to Change Folder Name When Cloning a GitHub Repo
+# How to Change Folder Name When Cloning a GitHub Repo
+    >> git clone https://github.com/preetgur/git-sheet.git new-folder-name
 
->> git clone https://github.com/preetgur/git-sheet.git new-folder-name
+# Git Remote Origin
+
+    list remote origins :
+        >> git remote -v
+
+    add remote origins : 
+        >> git remote add origin https://github/preetgur/xyx.git
+        note : you can give any name in palce of origin. 
+        example >> git remote add originlates https://github/preetgur/com
+
+    update remote origins :
+        >> git remote set-url origin https://git-repo/new-repository.git
+
