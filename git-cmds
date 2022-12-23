@@ -27,3 +27,50 @@ git push -u origin main
     update remote origins :
         >> git remote set-url origin https://git-repo/new-repository.git
 
+    # How to push to two git repositry from one repositry ?
+    answer : you can add multiple origin to the repositry and push to the sepecific repo by using their origin name.EX we have :
+        origin  https://github.com/preetgur/git-sheet.git (fetch)
+        origin  https://github.com/preetgur/git-sheet.git (push)
+        originlates     https://github.com/preetgur/testing.git (fetch)
+        originlates     https://github.com/preetgur/testing.git (push)
+
+        cmd : git push origin main 
+              git push originlates dev
+
+
+# Git branch
+    create new branch :
+    >> git branch dev
+
+    list branches : 
+    >> git branch
+    switch branch : 
+    >> git checkout master
+
+    To create a new branch and switch to it at the same time :
+    >>  git checkout -b master
+
+    merge the hotfix branch back into your master branch :
+    >> git checkout master
+       git merge hotfix
+    
+    first you’ll delete the hotfix branch, because you no longer need it — the master branch points at the same place. You can delete it with the -d option to git branch:
+    >> git branch -d hotfix
+
+    To see the last commit on each branch, you can run :
+    >> git branch -v
+
+    Rename the branch locally with the git branch --move command:
+    >> git branch --move bad-branch-name corrected-branch-name
+
+    This replaces your bad-branch-name with corrected-branch-name, but this change is only local for now. To let others see the corrected branch on the remote, push it:
+
+    >> git push --set-upstream origin corrected-branch-name
+
+    Ex: 
+        >> git branch --move master main
+        >> git push --set-upstream origin main
+    
+    you can delete the master branch:
+
+    >> git push origin --delete master
